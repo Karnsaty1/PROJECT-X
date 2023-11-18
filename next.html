@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Project X</title>
+    <style>
+        .circle-meter {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+           
+        }
+
+        .meter-fill {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: #4CAF50; /* Green color for the fill */
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        .meter-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+   </style>
+</head>
+<body>
+
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+           <img src="https://pngimg.com/uploads/cv/cv_PNG1.png" alt="" style="width: 8%;">
+            <span class="ml-3 text-xl">Resume Review</span>
+          </a>
+         
+
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto flex flex-col">
+              <div class="lg:w-4/6 mx-auto">
+               
+                <div class="flex flex-col sm:flex-row mt-10">
+                  <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                    <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+                        <img src="https://pngimg.com/uploads/cv/cv_PNG1.png" alt="" style="width: 101%;">
+                    </div>
+                    <div class="flex flex-col items-center text-center justify-center">
+                      <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Candidate Name</h2>
+                      <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+                    
+                    </div>
+                  </div>
+                  <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                    <p class="leading-relaxed text-lg mb-4">Reviews and analysis with suggestions  </p>
+                    <p>Final Score :</p>
+                    <div class="circle-meter">
+                        <div class="meter-fill" style="width: 75%;"></div>
+
+
+                        <div class="meter-text">75%</div>
+                    </div>
+
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+         
+           
+        </div>
+      </header>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Project X</title>
+</head>
+<body>
+    
+
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+           <img src="https://pngimg.com/uploads/cv/cv_PNG1.png" alt="" style="width: 8%;">
+            <span class="ml-3 text-xl">Resume Review</span>
+          </a>
+         
+         
+           
+        </div>
+      </header>
+
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">Submit Your File Here </h2>
+          <div class="md:w-3/5 md:pl-6">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="pdfFile">Select a PDF file:</label>
+                <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
+                <br>
+                <input type="submit" value="Upload">
+            </form>
+            <div class="flex md:mt-4 mt-6">
+              <a href="next.html" class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded" id="myLink" disabled>Submit</a>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+            // Get the file input and the link by their IDs
+            var pdfFileInput = document.getElementById('pdfFile');
+            var submitLink = document.getElementById('myLink');
+
+            // Add a change event listener to the file input
+            pdfFileInput.addEventListener('change', function () {
+                // Enable the link when a file is selected
+                submitLink.removeAttribute('disabled');
+            });
+
+            // Add a click event listener to the link
+            submitLink.addEventListener('click', function (event) {
+                // Prevent the default behavior of the link if it's still disabled
+                if (submitLink.hasAttribute('disabled')) {
+                    event.preventDefault();
+                    alert('Please select a file before submitting.');
+                }
+            });
+        </script>
+</body>
+</html>
